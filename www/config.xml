@@ -9,7 +9,7 @@
         version                 = "1.2.0">
         
         
-    <name>Matbutik inventory app</name>
+    <name>Orderstatus V4 - 2020</name>
 
     <description>
         Hotmat.se - Order manager for restaurants and drivers
@@ -45,13 +45,14 @@
     <plugin name="cordova-plugin-geolocation"/>
     <plugin name="cordova-plugin-whitelist"/>
     <plugin name="cordova-plugin-background-mode" />
+    <gap:plugin name="cordova-plugin-bluetoothle" source="npm" />
     <!--plugin name="cordova-plugin-battery-status"/>
     <plugin name="phonegap-plugin-barcodescanner" />    
     <plugin name="cordova-plugin-file"/>
     <plugin name="cordova-plugin-insomnia" />
     <plugin name="cordova-plugin-device-motion"/>
-    <plugin name="cordova-plugin-network-information"/>
-    <gap:plugin name="cordova-plugin-bluetoothle" source="npm" /-->
+    <plugin name="cordova-plugin-network-information"/-->
+    
     
     
     <plugin name="phonegap-plugin-push">
