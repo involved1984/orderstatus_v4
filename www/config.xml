@@ -4,9 +4,9 @@
 <widget xmlns                   = "http://www.w3.org/ns/widgets"
         xmlns:gap               = "http://phonegap.com/ns/1.0"
         id                      = "se.hotmat.orderstatus"
-        versionCode	        = "1020004"
-        ios-CFBundleVersion     = "1020004"
-        version                 = "1.2.0">
+        versionCode	        = "1020304"
+        ios-CFBundleVersion     = "1020304"
+        version                 = "1.2.3">
         
         
     <name>Orderstatus V4 - 2020</name>
