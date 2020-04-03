@@ -4,8 +4,8 @@
 <widget xmlns                   = "http://www.w3.org/ns/widgets"
         xmlns:gap               = "http://phonegap.com/ns/1.0"
         id                      = "se.hotmat.orderstatus"
-        versionCode	        = "1020003"
-        ios-CFBundleVersion     = "1020003"
+        versionCode	        = "1020004"
+        ios-CFBundleVersion     = "1020004"
         version                 = "1.2.0">
         
         
@@ -42,10 +42,10 @@
     <plugin name="cordova-plugin-statusbar"/>
     <plugin name="cordova-plugin-vibration"/>
     <plugin name="cordova-plugin-splashscreen"/>
-    <!--plugin name="cordova-plugin-geolocation"/>
+    <plugin name="cordova-plugin-geolocation"/>
     <plugin name="cordova-plugin-whitelist"/>
     <plugin name="cordova-plugin-background-mode" />
-    <gap:plugin name="cordova-plugin-bluetoothle" source="npm" /-->
+    <!--gap:plugin name="cordova-plugin-bluetoothle" source="npm" /-->
         
         
     <!--plugin name="cordova-plugin-battery-status"/>
@@ -119,6 +119,13 @@
         <splash src="res/screen/ios/Default-Portrait~ipad.png"      platform="ios" width="768"  height="1024" />
         <splash src="res/screen/ios/Default@2x~iphone.png"          platform="ios" width="640"  height="960" />
         <splash src="res/screen/ios/Default~iphone.png"             platform="ios" width="320"  height="480" />
+            
+        <edit-config target="NSLocationAlwaysUsageDescription" file="*-Info.plist" mode="merge">
+		<string>The system needs to know drivers location to dispatch the closest one for delivery</string>
+	</edit-config>	
+	<edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+		<string>The system needs to know drivers location to dispatch the closest one for delivery</string>
+        </edit-config>
     </platform>
 
 
