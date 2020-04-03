@@ -4,8 +4,8 @@
 <widget xmlns                   = "http://www.w3.org/ns/widgets"
         xmlns:gap               = "http://phonegap.com/ns/1.0"
         id                      = "se.hotmat.orderstatus"
-        versionCode	        = "1020304"
-        ios-CFBundleVersion     = "1020304"
+        versionCode	        = "1020305"
+        ios-CFBundleVersion     = "1020305"
         version                 = "1.2.3">
         
         
@@ -45,10 +45,12 @@
     <plugin name="cordova-plugin-geolocation"/>
     <plugin name="cordova-plugin-whitelist"/>
     <plugin name="cordova-plugin-background-mode" />
-    <gap:plugin name="cordova-plugin-bluetoothle" source="npm" />
+    <plugin name="cordova-plugin-battery-status"/>
+	
         
         
-    <!--plugin name="cordova-plugin-battery-status"/>
+    
+    <!--gap:plugin name="cordova-plugin-bluetoothle" source="npm" />
     <plugin name="phonegap-plugin-barcodescanner" />    
     <plugin name="cordova-plugin-file"/>
     <plugin name="cordova-plugin-insomnia" />
