@@ -4,8 +4,8 @@
 <widget xmlns                   = "http://www.w3.org/ns/widgets"
         xmlns:gap               = "http://phonegap.com/ns/1.0"
         id                      = "se.hotmat.orderstatus"
-        versionCode	        = "1020306"
-        ios-CFBundleVersion     = "1020306"
+        versionCode	        = "1020307"
+        ios-CFBundleVersion     = "1020307"
         version                 = "1.2.3">
         
         
@@ -46,6 +46,7 @@
     <plugin name="cordova-plugin-whitelist"/>
     <plugin name="cordova-plugin-background-mode" />
     <plugin name="cordova-plugin-battery-status"/>
+    <plugin name="cordova-background-geolocation-lt" source="npm"></plugin>
 	
         
         
@@ -122,12 +123,27 @@
         <splash src="res/screen/ios/Default@2x~iphone.png"          platform="ios" width="640"  height="960" />
         <splash src="res/screen/ios/Default~iphone.png"             platform="ios" width="320"  height="480" />
             
-        <edit-config target="NSLocationAlwaysUsageDescription" file="*-Info.plist" mode="merge">
-		<string>The system needs to know drivers location to dispatch the closest one for delivery</string>
-	</edit-config>	
-	<edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
-		<string>The system needs to know drivers location to dispatch the closest one for delivery</string>
-        </edit-config>
+        
+	
+	    
+	    
+	    
+	    <!-- background-geolocation -->
+	    <config-file parent="NSLocationAlwaysAndWhenInUseUsageDescription" target="*-Info.plist">
+		<string>Drivers location is needed to dispatch the nearest driver to pick up the order from the restaurant</string>
+	    </config-file>
+	    <config-file parent="NSLocationAlwaysUsageDescription" target="*-Info.plist">
+		<string>Drivers location is needed to dispatch the nearest driver to pick up the order from the restaurant</string>
+	    </config-file>
+	    <config-file parent="NSLocationWhenInUseUsageDescription" target="*-Info.plist">
+		<string>Drivers need to see the distance to the restaurant and customers address</string>
+	    </config-file>
+	    <config-file parent="NSMotionUsageDescription" target="*-Info.plist">
+		<string>This is used to decrease battery consumption while fetching location in background</string>
+	    </config-file>
+	    <!-- /background-geolocation -->
+	    
+	    
 	    
 	    
 	<resource-file src="notification.caf" />
