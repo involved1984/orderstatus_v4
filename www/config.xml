@@ -77,7 +77,7 @@
         
         
     <!-- Define app icon and splashscreen for each platform. -->
-    <!--platform name="android">
+    <platform name="android">
         <icon   src="res/icon.png" />
         <splash src="res/screen/android/drawable-land-ldpi-screen.png"      density="land-ldpi" />
         <splash src="res/screen/android/drawable-land-mdpi-screen.png"      density="land-mdpi" />
@@ -91,7 +91,11 @@
         <splash src="res/screen/android/drawable-port-xhdpi-screen.png"     density="port-xhdpi" />
         <splash src="res/screen/android/drawable-port-xxhdpi-screen.png"    density="port-xxhdpi" />
         <splash src="res/screen/android/drawable-port-xxxhdpi-screen.png"   density="port-xxxhdpi" />
-    </platform-->
+	    
+	    
+	    <resource-file src="notification.wav" />
+	    
+    </platform>
         
 
     <platform name="ios">
